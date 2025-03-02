@@ -3,39 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel = "stylesheet" href = "style.css"> 
+    <title>DulatSigma Portfolio</title>
     <style>
-    body {background-color: powderblue;}
-    h1   {color: blue;}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header, section, article, footer, nav {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        header {
+            background: #320a40;
+            color: rgb(10, 239, 255);
+            font-size: 26px;
+        }
+        nav a, button {
+            margin: 10px;
+            text-decoration: none;
+            color: rgb(230, 255, 253);
+            font-weight: bold;
+            padding: 10px 20px;
+            background: #d400ff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        section {
+            background: #5a7db9;
+            padding: 40px;
+            display: none;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+        }
+        .background-space {
+          background-color: #6b17a0;
+          padding: 20px;
+          border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-  <h1 style="color: blue">Sigma</h1>
-    <ul>
-        <li>persistent</li>
-        <li>dedication</li>
-        <li>passion</li>
-        <li>hustle</li>
-        <li>everyday getting better</li>
-      </ul>
-      <table>
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-      </table>
+    <header>
+        <h1>Welcome to My Sigma Portfolio yay</h1>
+        <nav>
+            <button onclick="showPage('about')">About mee</button>
+            <button onclick="showPage('projects')">Projects with ctrlC+V</button>
+            <button onclick="showPage('contact')">Contact and digits</button>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About mee</h2>
+        <img src="https://scontent.fakx4-2.fna.fbcdn.net/v/t39.30808-6/481213142_639224962089798_4791448639313275446_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=N4sj8KmDidAQ7kNvgH3-oaN&_nc_oc=Adj71ybXHvqfvPJJXDZfkmK2c9Xz9fU-8nOrp1DeXo7BmG4nUB8nZaRgEKcplV2PhnE&_nc_zt=23&_nc_ht=scontent.fakx4-2.fna&_nc_gid=AYB36Bsb7Nj29P3RCepLJYw&oh=00_AYA1ee5PkwKr9kq0fWBN5NJB7oLoJ4fCemzq0crAzSB6Vw&oe=67CA3E0D" length="300px" width="200px">
+        <p class="background-space"><strong> Hey man! I'm a 16 years old mand and the most talented basketball player with incredible skills </strong></p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects with ctrlC+V</h2>
+        <article>
+            <h3><strong>BasketRoutine</strong></h3>
+            <img src="https://revolutionbasketballtraining.com/wp-content/uploads/2024/06/Personal-Basketball-Training-Can-Elevate-Your-Game-1.png" length="300px" width="200px">
+            <p class="background-space"><i>App by providing basketball drills, workout and healthy routine</i></p>
+        </article>
+        <article>
+            <h3><strong>BestCourt.kz</strong></h3>
+            <img src="https://images.squarespace-cdn.com/content/v1/58b72cc520099eaff33166ea/1687987226768-KVA5GMWK4H66QXA8Q1OJ/DJI_0133+%281%29.JPG?format=750w" length="300px" width="200px">
+            <p class="background-space"><i>A web app for analyzing which basketball court in kz is most convenient and with the best performance</i></p>
+        </article>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact and digits</h2>
+        <p class="background-space">Email: dulatsigma@mail.ru</p><br>
+        <p class="background-space">Number: +7 775 133 6454</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2045 it's my Portfolio. All Rights are mine:)</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            let sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            showPage('about');
+        });
+    </script>
 </body>
 </html>
-    
